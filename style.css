@@ -1,0 +1,199 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Jumbotron dengan padding yang lebih konsisten */
+.jumbotron {
+  padding: 80px 0;
+}
+
+/* Mengatur padding untuk section yang spesifik */
+#about,
+#Projects,
+#Contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#about .card-body p,
+#Projects .card-body p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 15px; 
+}
+
+#Contact .form-label {
+  font-weight: bold;
+}
+
+#Contact .form-control {
+  border-radius: 10px;
+}
+
+#Contact .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+#Contact .social-icons a {
+  font-size: 2rem;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+#Contact .social-icons a:hover {
+  color: #ff5733;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .jumbotron {
+    padding: 50px 0;
+  }
+
+  #about,
+  #Projects,
+  #Contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /* Mengubah ukuran social icons pada perangkat kecil */
+  .social-icons a {
+    font-size: 1.5rem; /* Ukuran lebih kecil */
+  }
+
+  .social-icons {
+    gap: 10px; /* Mengurangi gap antar icon */
+  }
+
+  .social-icon {
+    font-size: 2rem;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Home section margin adjustment */
+#home {
+  margin-bottom: 80px;
+}
+
+/* Mengatur margin pada section tertentu */
+#about,
+#Projects,
+#Contact {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Penyesuaian jarak antar Project dan Contact */
+#Projects {
+  margin-bottom: 100px;  /* Menambahkan jarak bawah agar Project terpisah lebih jelas dari Contact */
+}
+
+#Contact {
+  margin-top: 100px; /* Menambahkan jarak atas agar tidak bertabrakan dengan Project */
+}
+
+/* Efek hover pada project card */
+.project-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Menambahkan animasi pada project card */
+.project-card {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efek hover pada social icon */
+.social-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: rgba(0, 123, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background-color: #007bff;
+  color: white;
+}
+
+.social-icon.whatsapp:hover {
+  background-color: #25d366;
+}
+
+.social-icon.instagram:hover {
+  background-color: #e1306c;
+}
+
+.social-icon.tiktok:hover {
+  background-color: #010101;
+}
+
+@media (max-width: 767px) {
+  .social-icon {
+    font-size: 2rem;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+  }
+}
