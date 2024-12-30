@@ -5,30 +5,36 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-bottom: 0;
+}
 
 section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px; 
+  padding-bottom: 80px; 
 }
 
-/* Jumbotron dengan padding yang lebih konsisten */
 .jumbotron {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
-/* Mengatur padding untuk section yang spesifik */
 #about,
 #Projects,
 #Contact {
-  padding-top: 80px;
+  padding-top: 80px;   
   padding-bottom: 80px;
+}
+
+#about, #Projects, #Contact {
+  margin-top: 100px; 
+  margin-bottom: 100px; 
 }
 
 #about .card-body p,
 #Projects .card-body p {
   text-align: justify;
   text-justify: inter-word;
-  margin-bottom: 15px; 
+  margin-bottom: 20px; 
 }
 
 #Contact .form-label {
@@ -42,7 +48,7 @@ section {
 #Contact .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;  
   padding: 20px 0;
 }
 
@@ -56,42 +62,37 @@ section {
   color: #ff5733;
 }
 
+/* Footer */
 footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 0; 
+  padding-bottom: 0;
 }
 
 @media (max-width: 767px) {
   section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px; 
+    padding-bottom: 60px;
   }
 
   .jumbotron {
-    padding: 50px 0;
+    padding: 60px 0;
   }
 
-  #about,
-  #Projects,
-  #Contact {
+  #about, #Projects, #Contact {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  /* Mengubah ukuran social icons pada perangkat kecil */
-  .social-icons a {
-    font-size: 1.5rem; /* Ukuran lebih kecil */
-  }
-
   .social-icons {
-    gap: 10px; /* Mengurangi gap antar icon */
+    gap: 15px; 
   }
 
   .social-icon {
-    font-size: 2rem;
-    padding: 12px;
-    width: 50px;
-    height: 50px;
+    font-size: 2rem; 
+  }
+
+  .social-icons {
+    gap: 10px; 
   }
 
   .section-title {
@@ -99,29 +100,7 @@ footer {
   }
 }
 
-/* Home section margin adjustment */
-#home {
-  margin-bottom: 80px;
-}
 
-/* Mengatur margin pada section tertentu */
-#about,
-#Projects,
-#Contact {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-/* Penyesuaian jarak antar Project dan Contact */
-#Projects {
-  margin-bottom: 100px;  /* Menambahkan jarak bawah agar Project terpisah lebih jelas dari Contact */
-}
-
-#Contact {
-  margin-top: 100px; /* Menambahkan jarak atas agar tidak bertabrakan dengan Project */
-}
-
-/* Efek hover pada project card */
 .project-card {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -140,7 +119,7 @@ footer {
   transform: scale(1.1);
 }
 
-/* Menambahkan animasi pada project card */
+
 .project-card {
   animation: fadeInUp 0.6s ease-in-out;
 }
@@ -156,7 +135,7 @@ footer {
   }
 }
 
-/* Efek hover pada social icon */
+
 .social-icon {
   font-size: 2.5rem;
   color: #007bff;
@@ -189,6 +168,7 @@ footer {
   background-color: #010101;
 }
 
+/* Responsif untuk social icon */
 @media (max-width: 767px) {
   .social-icon {
     font-size: 2rem;
@@ -197,3 +177,53 @@ footer {
     height: 50px;
   }
 }
+
+
+.nav-link {
+  position: relative;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  left: 50%;
+  bottom: 0;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #ff6347; 
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #ff6347;
+}
+
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
