@@ -206,20 +206,20 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+              <form method="post" action="#">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" />
+                  <input type="text" name="name" class="form-control" id="name" aria-describedby="name" />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="email" />
+                  <input type="email" name="email" class="form-control" id="email" aria-describedby="email" />
                 </div>
                 <div class="mb-3">
                   <label for="pesan" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="Pesan" rows="3"></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Kirim</button>
+                <button type="button" id="submitBtn" class="btn btn-primary">Kirim</button>
               </form>
 
               <!-- Social Media Icons -->
@@ -247,5 +247,7 @@
       </footer>
       <!-- end Footer -->
     </main>
+
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>

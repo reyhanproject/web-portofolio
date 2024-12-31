@@ -2,7 +2,7 @@ let dataContact = [];
 
 const getData = async () => {
   try {
-    const response = await fetch("http://localhost:8000/api/contacts", {
+    const response = await fetch("https://back-end-project-three.vercel.app/api/contacts", {
       method: "GET",
     });
 
@@ -35,19 +35,18 @@ const renderData = () => {
   bodyData.innerHTML = body;
 };
 
-getData();
 
 // Form Submission
 const submitBtn = document.getElementById("submitBtn");
 
 if (submitBtn) {
   submitBtn.addEventListener("click", async function () {
-    const nama = document.getElementById("nama")?.value;
+    const name = document.getElementById("name")?.value;
     const email = document.getElementById("email")?.value;
-    const pesan = document.getElementById("pesan")?.value;
+    const message = document.getElementById("message")?.value;
 
     // Cek jika ada input yang kosong
-    if (!nama || !email || !pesan) {
+    if (!name || !email || !message) {
       alert("Please fill out all fields");
       return;
     }
@@ -60,13 +59,13 @@ if (submitBtn) {
     }
 
     const formData = {
-      name: nama,
+      nama: name,
       email: email,
-      pesan: pesan,
+      pesan: message,
     };
 
     try {
-      const response = await fetch("http://localhost:8000/api/contact", {
+      const response = await fetch("https://back-end-project-three.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
