@@ -24,6 +24,7 @@ section {
   padding-bottom: 80px;
 }
 
+#jumbotron,
 #about,
 #Projects,
 #Contact {
@@ -75,10 +76,6 @@ footer {
     padding-bottom: 60px;
   }
 
-  .jumbotron {
-    padding: 60px 0;
-  }
-
   #about,
   #Projects,
   #Contact {
@@ -99,7 +96,12 @@ footer {
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
   }
 }
 
@@ -178,6 +180,12 @@ footer {
   }
 }
 
+@media (max-width: 767px) {
+  .navbar-toggler {
+    border-color: white;
+  }
+}
+
 .nav-link {
   position: relative;
   padding: 10px;
@@ -223,3 +231,49 @@ footer {
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
+
+#about img {
+  max-width: 80%;
+  height: auto;
+  border: 5px solid #fff; /* White border around the image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for the image */
+}
+
+.section-title {
+  font-size: 36px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card-body p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Style for Social Icons */
+.social-links {
+  font-size: 1.75rem;
+}
+
+.social-icon {
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ff6347;
+  transform: scale(1.2);  /* Slightly enlarges the icon on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-links {
+    font-size: 1.5rem;
+  }
+}
+
